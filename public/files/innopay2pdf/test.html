@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body { background-color: #EEE; }
+
+			.page {
+				max-width: 1024px;
+				padding: 32px;
+				margin: 32px auto;
+
+				background-color: #FFF; }
+		</style>
+	</head>
+	<body>
+		<div id="result"></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+var test;
+
+$(function(){
+	function calculateScore() {
+		function getId() {
+			$.ajax({
+				url: 'https://api.surveymonkey.net/v2/surveys/get_respondent_list?api_key=sjc6wsnrz2jtytrevmb5qgvu',
+				type: 'post',
+				contentType: 'application/json',
+				dataType: 'json',
+				data: JSON.stringify({
+					"survey_id": "68094278",
+					"order_by": "date_modified",
+					"fields": [
+						"custom_id"
+					]
+				}),
+				headers: {
+					Authorization:'bearer paTBz61kMlD0mPWrsaHR3921EuYbHlBvqU0GDZQ.5nahBvB1GbdZpbh2WnOzXY4S426kdtnk2BZ6mtSjXYlsHzJEhV1mujm1c4d2rYRohro=',
+					'Content-Type':'application/json',
+				},
+				complete:function(jqXHR, textStatus){
+					id = jqXHR.responseJSON.data.respondents[0].respondent_id;
+					//console.log(jqXHR.responseJSON);
+
+					getQuestions();
+				}
+			});
+		}
+
+		function getQuestions() {
+			$.ajax({
+				url: 'https://api.surveymonkey.net/v2/surveys/get_survey_details?api_key=sjc6wsnrz2jtytrevmb5qgvu',
+				type: 'post',
+				contentType: 'application/json',
+				dataType: 'json',
+				data: JSON.stringify({
+					"survey_id": "68094278"
+				}),
+				headers: {
+					Authorization:'bearer paTBz61kMlD0mPWrsaHR3921EuYbHlBvqU0GDZQ.5nahBvB1GbdZpbh2WnOzXY4S426kdtnk2BZ6mtSjXYlsHzJEhV1mujm1c4d2rYRohro=',
+					'Content-Type':'application/json',
+				},
+				complete:function(jqXHR, textStatus){
+					pages = jqXHR.responseJSON.data.pages;
+					console.log(pages);
+
+					getAnswers();
+				}
+			});
+		}
+
+		function getAnswers() {
+			$.ajax({
+				url: 'https://api.surveymonkey.net/v2/surveys/get_responses?api_key=sjc6wsnrz2jtytrevmb5qgvu',
+				type: 'post',
+				contentType: 'application/json',
+				dataType: 'json',
+				data: JSON.stringify({
+					"respondent_ids": [id],
+					"survey_id": "68094278"
+				}),
+				headers: {
+					Authorization:'bearer paTBz61kMlD0mPWrsaHR3921EuYbHlBvqU0GDZQ.5nahBvB1GbdZpbh2WnOzXY4S426kdtnk2BZ6mtSjXYlsHzJEhV1mujm1c4d2rYRohro=',
+					'Content-Type':'application/json',
+				},
+				complete:function(jqXHR, textStatus){
+					test = jqXHR.responseJSON;
+					console.log(jqXHR.responseJSON);
+					answers = jqXHR.responseJSON.data[0].questions;
+
+					parseAnswers();
+				}
+			});
+		}
+
+		function parseAnswers() {
+			var el = document.getElementById('result');
+
+			pages.sort(function(a, b) {
+				return a['position'] - b['position'];
+			});
+
+			for (var i = 0; i < pages.length; i++) {
+				var html,
+					questions = pages[i]['questions'].sort(function(a, b) {
+						return a['position'] - b['position'];
+					});
+
+				html = '<h1>' + (i + 1) + '. ' + pages[i]['heading'] + '</h1>';
+
+				for (var j = 0; j < questions.length; j++) {
+					html += '<h2>' + questions[j]['heading'] + '</h2>';
+
+					var myquestion = answers.filter(function (a) { a['question_id'] == questions[j]['question_id']; })[0];
+
+					for (var k = 0; k < questions[j].length; k++) {
+						var subquestions = questions[j].filter(function (a) {
+								return a.weight == undefined;
+							}).sort(function (a, b) {
+								return a['position'] - b['position'];
+							}),
+							subanswers = questions[j].filter(function (a) {
+								return a.weight !== undefined;
+							});
+
+						for (var l = 0; l < subquestions.length; l++) {
+							var myans = myquestion[l]['col'],
+								ans = subanswers.filter(function (a) { return a['answer_id'] == myans; })[0];
+							html += '<p>' + subquestions[l]['text'] + ': ' + ans['text'] + '</p>';
+						}
+						//html += '<h3></h3>';
+					}
+				} 
+
+
+
+				var div = document.createElement('div');
+				div.className = 'page';
+				div.innerHTML = html;
+
+				el.appendChild(div);
+			}
+
+			/*
+			for (var i = 0; i < answers.length; i++) {
+				var str = '<h2>' + getQuestion(answers[i].question_id) + '</h2>';
+
+				for (var j = 0; j < answers[i].answers.length; j++) {
+					str += '<p>' + (answers[i].answers[j].col || answers[i].answers[j].text) + '</p>';
+				}
+
+				var answer = document.createElement('div');
+				answer.className = 'answer';
+				answer.innerHTML = str;
+
+				el.appendChild(answer);
+			}*/
+		}
+
+		var id, answers, pages;
+
+		getId();
+	}
+
+	calculateScore();
+});
+		</script>
+	</body>
+</html>

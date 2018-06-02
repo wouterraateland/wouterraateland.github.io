@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="apple-touch-icon" href="images/icon.png">
+		<!--<link rel="apple-touch-startup-image" href="images/startup.png">-->
+		<link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=320, user-scalable=no">
+
+		<title>Flappy Birth</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div id="container">
+			<canvas tabindex="1">Sorry, your browser does not support the <code>&lt;canvas&gt;</code> element</canvas>
+			<form name="name" id="nameForm">
+				<label>What is your baby called?</label>
+				<input type="text" name="">
+				<input type="submit" value="&rarr;">
+			</form>
+			<menu>
+				<h1>FLAPPY BIRTH</h1>
+				<a id="start">&#9654;</a>
+				<a id="highscores"></a>
+			</menu>
+			<p id="score"></p>
+			<div id="results">
+				<p>Best: <span id="highscore"></span></p>
+				<p>Last: <span id="lastscore"></span></p>
+			</div>
+			<div id="scoreTable"></div>
+		</div>
+		<script src="scripts.js"></script>
+	</body>
+</html>

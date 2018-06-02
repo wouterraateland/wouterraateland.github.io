@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>Visitekaartje</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div id="back" class="card center"></div>
+		<div id="front" class="card center"></div>
+		<div id="shadow" class="card center"></div>
+	</body>
+	<script>
+		var f = document.getElementById('front'),
+			b = document.getElementById('back');
+
+		function rotate(event) {
+			event = event || window.event;
+			
+			var r = 2*360*event.pageX/window.innerWidth;
+
+			f.style.transform = f.style.msTransform = f.style.webkitTransform = 'rotateY(' + r + 'deg)';
+			b.style.transform = b.style.msTransform = b.style.webkitTransform = 'rotateY(' + ((r + 180) % 360) + 'deg)';
+		}
+
+		document.onmousemove = rotate;
+	</script>
+</html>

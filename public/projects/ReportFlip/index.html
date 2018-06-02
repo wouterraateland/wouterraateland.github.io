@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Write reports in a snap, or sell them. | ReportFlip</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
+	<link href="normalize.css" type="text/css" rel="stylesheet">
+	<link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav id="mainNav">
+	<div class="alignleft">
+		<ul>
+			<li><a href="/">
+				<img class="logo" src="assets/logos/reportflip_logo_coloured.svg">
+			</a></li>
+			<li id="navSearch">
+				<form class="row" action="/search">
+					<input type="search" name="query" placeholder="search reports">
+					<button class="button" type="submit">Search</button>
+					<div class="dropdown" id="categorySelect">
+						<ul>
+							<li>Browse categories</li>
+							<li><a href="/category/mathematics">Mathematics</a></li>
+							<li><a href="/category/physics">Physics</a></li>
+							<li><a href="/category/biology">Biology</a></li>
+							<li><a href="/category/aerospace">Areospace</a></li>
+							<li><a href="/category/finance">Finance</a></li>
+							<li><a href="/category/law">Law</a></li>
+							<li><a href="/category/history">History</a></li>
+						</ul>
+					</div>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<div class="alignright">
+		<ul id="mainMenu">
+			<li><a href="/faq">FAQ</a></li>
+			<li><a href="#">Start selling</a></li>
+			<li><a href="#">Sign up</a></li>
+			<li><a href="#">Log in</a></li>
+			<li>
+				<div class="dropdown" id="languages">
+					<ul>
+						<li><a href="#" class="flag-en"></a></li>
+						<li><a href="#" class="flag-de"></a></li>
+						<li><a href="#" class="flag-nl"></a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="hidden-l" id="menuToggle"></div>
+	</div>
+</nav>
+
+<header class="dark">
+	<div class="wrapper">
+		<h1>Writing reports doesn't have to feel this way</h1>
+		<p>All reports you ever have to write, in one single library.</p>
+	</div>
+</header>
+
+<div class="wrapper hidden-m">
+	<form id="searchForm" class="row" action="/search">
+		<label class="col-5">
+			What
+			<input type="text" name="query" placeholder="Real analysis assignment 3">
+		</label>
+		<label class="col-5">
+			Category
+			<input type="text" name="category" placeholder="physics, mathemathics, ...">
+		</label>
+		<label class="col-2">
+			<button type="submit" class="button accent big">Search</button>
+		</label>
+	</form>
+</div>
+
+<main>
+	<section id="benefits">
+		<div class="row center">
+			<div class="wrapper">
+				<h2 class="col-12">How we benefit you</h2>
+				<div class="col-12">
+					<p class="intro">ReportFlip has a library of over a thousand reports, presentations, motivation letters, homework examples and more.</p>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="row benefit">
+				<div class="col-3 col-s-12 right center-s">
+					<img src="assets/images/time.svg">
+				</div>
+				<div class="col-l-6 col-m-9 col-s-12">
+					<h3>Time</h3>
+					<p>No more, hours of searching through the web and finding low quality examples or reports, etc.<br>ReportFlip can save you up to 50 hours a month. That is a lot of partying!</p>
+				</div>
+			</div>
+			<div class="row benefit">
+				<div class="col-3 col-s-12 right center-s">
+					<img src="assets/images/quality.svg">
+				</div>
+				<div class="col-l-6 col-m-9 col-s-12">
+					<h3>Quality</h3>
+					<p>All reports uploaded to ReportFlip are checked for quality. Here you will find excellent work to speed up your school work. Fast. Easy and guaranteed time saving.</p>
+				</div>
+			</div>
+			<div class="row benefit">
+				<div class="col-3 col-s-12 right center-s">
+					<img src="assets/images/quantity.svg">
+				</div>
+				<div class="col-l-6 col-m-9 col-s-12">
+					<h3>Quantity</h3>
+					<p>ReportFlip has a library of over a thousand reports, presentations, motivation letters, homework examples and more.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="howItWorks">
+		<div class="row center">
+			<div class="wrapper">
+				<h2 class="col-12">Get started in 3 steps</h2>
+				<div class="col-12">
+					<p class="intro">After all the hours you spend on doing your homework, it is just sitting there, taking up space on your harddrive. With ReportFlip this homework can make you money, easy.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="row" id="steps">
+				<h3 class="center">It's as easy as</h3>
+				<div class="step col-4">Sign up for Report&#8203;Flip<img src="assets/images/signup.svg"></div>
+				<div class="step col-4">Upload your reports<img src="assets/images/upload.svg"></div>
+				<div class="step col-4">Earn money<img src="assets/images/money.svg"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonials">
+		<div class="row center">
+			<div class="wrapper">
+				<h2 class="col-12">Experiences from our users</h2>
+				<div class="col-12">
+					<p class="intro">At ReportFlip, we value our readers and writers. We want to give them the best experience and save them as much time as possible.</p>
+				</div>
+			</div>
+		</div>
+		<div id="testimonialContainer">
+			<div class="testimonial">
+				<div class="wrapper">
+					<div class="middle-l row">
+						<div class="col-3 col-m-12 right-l center-m">
+							<img src="assets/testimonials/face3.jpg">
+						</div>
+						<blockquote class="col-l-9 col-m-12">Amazing how much time ReportFlip saved me. lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial">
+				<div class="wrapper">
+					<div class="middle-l row">
+						<div class="col-3 col-m-12 right-l center-m">
+							<img src="assets/testimonials/face2.jpg">
+						</div>
+						<blockquote class="col-l-9 col-m-12">Amazing how much time ReportFlip saved me. lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial">
+				<div class="wrapper">
+					<div class="middle-l row">
+						<div class="col-3 col-m-12 right-l center-m">
+							<img src="assets/testimonials/face1.jpg">
+						</div>
+						<blockquote class="col-l-9 col-m-12">Amazing how much time ReportFlip saved me. lorem ipsum dolor sit amet, consectetur dolore ullamco laboris nisi ut aliquip ex ea.</blockquote>
+					</div>
+				</div>
+			</div>
+			<div id="prevTestimonial"></div>
+			<div id="nextTestimonial"></div>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<p class="col-12 cta">Do you have an interesting experience with ReportFlip? <a class="button accent alignright">Share your experience</a></p>
+			</div>
+		</div>
+	</section>
+
+	<section id="bestSellers">
+		<div class="row center">
+			<div class="wrapper">
+				<h2 class="col-12">Our bestsellers</h2>
+				<div class="col-12">
+					<p class="intro">All reports on ReportFlip are of checked to be of good quality. There are however always reports which stand out from the crowd...</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="row report">
+				<div class="col-3 center hidden-m">
+					<p class="saving">Saves you <span class="big">15</span> hours of work</p>
+				</div>
+				<div class="description col-9 col-m-12">
+					<h3><a href="#">Chemical plant design: Acrylic Acid production</a></h3>
+					<p class="meta">
+						<span class="references">13 references</span>
+						<span class="pages">25 pages</span>
+						<span class="language">English</span>
+						<span class="rating" data-rating="3.5"></span>
+					</p>
+					<p class="summary">A chemical plant design for lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div>
+				<div class="right">
+					<a class="button">Preview report</a>
+					<a class="button">Buy for 9,99</a>
+				</div>
+			</div>
+			<div class="row report">
+				<div class="col-3 center hidden-m">
+					<p class="saving">Saves you <span class="big">40</span> hours of work</p>
+				</div>
+				<div class="description col-9 col-m-12">
+					<h3><a href="#">Local density approximations in quantum chemistry and solid state physics</a></h3>
+					<p class="meta">
+						<span class="references">13 references</span>
+						<span class="pages">25 pages</span>
+						<span class="language">English</span>
+						<span class="rating" data-rating="4"></span>
+					</p>
+					<p class="summary">The simplest picture of an atom, a molecule or a solid is the picture of its distribution of charge. It is obtained by specifying the positions of the atomic nuclei and by showing how the density.</p>
+				</div>
+				<div class="right">
+					<a class="button">Preview report</a>
+					<a class="button">Buy for 19,99</a>
+				</div>
+			</div>
+			<div class="row report">
+				<div class="col-3 center hidden-m">
+					<p class="saving">Saves you <span class="big">25</span> hours of work</p>
+				</div>
+				<div class="description col-9 col-m-12">
+					<h3><a href="#">Ultrasonic methods in solid state physics</a></h3>
+					<p class="meta">
+						<span class="references">13 references</span>
+						<span class="pages">25 pages</span>
+						<span class="language">English</span>
+						<span class="rating" data-rating="4.5"></span>
+					</p>
+					<p class="summary">Ultrasonic Methods in Solid State Physics is devoted to studies of energy loss and velocity of ultrasonic waves which have a bearing on present-day problems in solid-state physics.</p>
+				</div>
+				<div class="right">
+					<a class="button">Preview report</a>
+					<a class="button">Buy for 14,99</a>
+				</div>
+			</div>
+			<div class="row">
+				<p class="col-12 cta">Like the reports you see here? <a class="button accent alignright" href="">Show more top reports</a></p>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="dark">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-4 hidden-s">
+				<img src="assets/logos/reportflip_logo_white.svg" class="logo">
+			</div>
+			<p class="col-4 col-s-6 center-s">
+				<a href="#" class="button">Start selling</a>
+			</p>
+			<p class="col-4 col-s-6 center-s">
+				<a href="#" class="button accent">Sign up</a>
+			</p>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-4 col-s-6">
+				<h3>Language</h3>
+				<a href="#" class="flag-en"></a>
+				<a href="#" class="flag-de"></a>
+				<a href="#" class="flag-nl"></a>
+				<h3>Social</h3>
+				<a href="#" class="facebook"></a>
+				<a href="#" class="twitter"></a>
+				<a href="#" class="google"></a>
+			</div>
+
+			<div class="col-4 col-s-6">
+				<h3>Connect</h3>
+				<p>Grote Markt 33A<br>2625AB Delft</p>
+				<p><a style="word-break: break-all;" href="mailto:info@reportflip.com">info@reportflip.com</a></p>
+			</div>
+
+			<div class="col-4 col-s-12">
+				<h3>Join the newsletter</h3>
+				<p>Get 10% discount on your first purchase.</p>
+				<form>
+					<input type="email" name="email" placeholder="Email address">
+					<button type="submit" class="button accent">Join</button>
+				</form>
+			</div>
+		</div>
+
+		<hr class="hidden-s">
+
+		<div class="row hidden-s">
+			<p class="col-4">Top Categories</p>
+			<p class="col-8" id="categories">
+				<a href="/category/mathematics">Mathematics</a>
+				<a href="/category/physics">Physics</a>
+				<a href="/category/biology">Biology</a>
+				<a href="/category/aerospace">Areospace</a>
+				<a href="/category/finance">Finance</a>
+				<a href="/category/law">Law</a>
+				<a href="/category/history">History</a>
+			</p>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<p class="col-4 col-s-12">&copy; ReportFlip - All rights reserved</p>
+
+			<p class="col-4 col-s-6">
+				<a href="/privacy">Privacy policy</a>
+			</p>
+
+			<p class="col-4 col-s-6">
+				<a href="/disclaimer">Disclaimer</a>
+			</p>
+
+			<div class="col-4 hidden-s"></div>
+
+			<p class="col-4 col-s-12">
+				<a href="/terms">Terms and Conditions</a>
+			</p>
+		</div>
+	</div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* COLORS
+ * Light blue:	#5E82AF
+ * Dark blue:	#364F68
+ * White:		#FFFFFF
+ * Orange:		#F99314
+ */
+
+/* Reset styles */
+*, *::before, *::after {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; }
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	vertical-align: top; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+
+/* Style elements */
+html, body {
+	width: 100%;
+	height: 100%;
+	line-height: 1; }
+
+img {
+	max-width: 100%;
+	max-height: 100%; }
+
+a {
+	text-decoration: none;
+	color: inherit; }
+
+	a:hover { border-bottom: 2px solid; }
+
+hr {
+	height: 4px;
+	margin: 24px auto; }
+
+	.row::after,
+	.inner::after { content: ''; display: block; clear: both; }
+
+.inner {
+	max-width: 1280px;
+	padding: 12px;
+	margin: auto; }
+
+.col {
+	display: block;
+	padding: 12px;
+	min-height: 1px;
+	float: left; }
+
+	.c1  { width: 08.333333%; }
+	.c2  { width: 16.666666%; }
+	.c3  { width: 25%; }
+	.c4  { width: 33.333333%; }
+	.c5  { width: 41.666666%; }
+	.c6  { width: 50%; }
+	.c7  { width: 33.333333%; }
+	.c8  { width: 66.666666%; }
+	.c9  { width: 75%; }
+	.c10 { width: 83.333333%; }
+	.c11 { width: 91.666666%; }
+	.c12 { width: 100%; }
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1; }
+	h1 { font-size: 48px; font-weight: bold; margin: 12px 0; }
+	h2 { font-size: 40px; font-weight: bold; margin: 16px 0; }
+	h3 { font-size: 32px; font-weight: bold; margin: 20px 0; }
+	h4 { font-size: 24px; font-weight: bold; margin: 12px 0; }
+	h5 { font-size: 20px; font-weight: bold; margin: 14px 0; }
+	h6 { font-size: 16px; font-weight: bold; margin: 16px 0; }
+
+p { margin: 12px 0; }
+
+ol, ul { margin-left: 24px; }
+	ul { list-style-type: circle; }
+
+q { font-style: italic; }
+
+blockquote {
+	padding-left: 20px;
+	border-left: 4px solid; }
+
+pre {
+	padding: 12px;
+	background: #323232;
+	color: #ffffff; }
+
+nav {}
+
+	nav.fixed {
+		position: fixed;
+		left: 0; top: 0; right: 0; }
+
+textarea, input, select { font: inherit; }
+
+/* Colors */
+.light  { color: #323232; background-color: #ffffff; }
+.dark   { color: #ffffff; background-color: #323232; }
+.accent { color: #ffffff; background-color: #ff1122; }
+
+/* Specific styles */
+.color {
+	width: 20vw;
+	height: 64px;
+	margin: 16px auto;
+
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .1); }
