@@ -1,7 +1,11 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Link = styled.a`
-  color: ${props => props.theme.colors.accent};
+  display: inline-block;
+
+  color: currentColor;
+  ${props => props.primary && css`color: ${props.theme.colors.primary};`}
+  ${props => props.accent && css`color: ${props.theme.colors.accent};`}
 `
 
 export default Link

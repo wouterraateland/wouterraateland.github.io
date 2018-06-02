@@ -1,22 +1,23 @@
 import React from 'react'
 import { ThemeProvider, injectGlobal } from 'styled-components'
+import { opacity } from 'style-utils'
 
 const theme = {
   fonts: {
-    main: 'roboto, sans-serif',
+    main: `'Source Sans Pro', roboto, sans-serif`,
     titles: `'Passion One', cursive`,
   },
   colors: {
-    text: '#000',
+    text: 'rgba(0, 0, 0, .5)',
     background: '#fff',
     primary: '#52006b',
-    accent: '#e87511',
+    accent: '#00e9b3',
     success: '#4caf50',
     warning: '#ffc107',
     error: '#f44336',
   },
   opacity: {
-    titles: 0.2,
+    titles: 0.8,
     text: 0.55,
   },
   border: {
@@ -31,8 +32,6 @@ const theme = {
 }
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Passion+One:400,700');
-
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -47,6 +46,7 @@ injectGlobal`
     margin: 0;
 
     font-family: ${theme.fonts.main};
+    color ${opacity(theme.colors.text,theme.opacity.text)};
   }
 
   input, textarea, select, button {

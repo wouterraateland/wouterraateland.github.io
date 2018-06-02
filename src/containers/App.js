@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router'
 
-import Translations from 'components/Translations'
-import Theme from 'components/Theme'
+import Translations from 'containers/Translations'
+import Theme from 'containers/Theme'
 import { Container } from 'components/lib'
 import HomePage from 'pages/home'
 

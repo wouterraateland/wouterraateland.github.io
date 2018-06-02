@@ -7,7 +7,7 @@ import { ConnectedRouter } from 'react-router-redux'
 // import registerServiceWorker from './registerServiceWorker'
 import configureStore from './store'
 
-import App from 'components/App'
+import App from 'containers/App'
 
 const history = createHistory()
 const initialState = {
