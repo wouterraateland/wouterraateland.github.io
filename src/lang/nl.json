@@ -1,0 +1,45 @@
+{
+  "page": {
+    "title": "<0>Keihard</0> roeien voor <1>KiKa</1>",
+    "intro": "Op 6 juni 2018, gaan wij keihard roeien. Wij, Daniël, Sigur, Leon en Wouter, doen namelijk mee aan de Ringvaart. In deze jaarlijks terugkerende roeiwedstrijd, gaan we de strijd aan met andere roeiers en onszelf in een 100 kilometer lange tour. Dit doen we niet alleen voor onszelf, we roeien deze tocht ook voor KiKa. En daarbij hebben we jouw hulp nodig!",
+
+    "question1": "Wat gebeurt er met mijn geld?",
+    "answer1": "Dat kan je zelf kiezen. Kies je om KiKa én ons sponsoren, dan bekostigen we van een deel<sup>*</sup> van jouw sponsorbedrag onze wedstrijdoutfits en gaat de rest direct naar KiKa. Ook komt dan jouw (bedrijfs)naam- en logo op onze shirts. Dat is 100 km lang exposure aan heel veel toeschouwers! Kies je om alleen KiKa te sponsoren, dan gaat jouw gehele sponsorbedrag direct naar KiKa toe!",
+    "remark": "20% van jouw sponsorbedrag of maximaal €120 in totaal",
+    "question2": "De Ringvaart, wat is dat precies?",
+    "answer2": "De Ringvaart is met een slopende 100 kilometer de langste roeimarathon van Europa. In deze tocht roeien allerlei roeiers mee: van wedstrijdroeiers met jaren ervaring, tot ringvaartleden die in februari voor het eerst in de boot stapten (wij dus). De tocht start in Leiden, gaat via Amstelveen omhoog richting Haarlem en keert daar weer naar het zuiden door de bollenstreek terug naar Leiden en ten slotte Delft. Voor meer informatie over de ringvaart, check <1><0>parthenon-ey-ringvaartregatta.nl</0></1>.",
+    "question3": "Kan ik jullie ook op een andere manier helpen?",
+    "answer3": "Zeker! Tijdens de ongeveer 8 tot 13 uur dat we in de boot zitten kunnen we best wat aanmoediging gebruiken! Kan je er bij zijn op 6 juni, dan zouden wij het heel erg waarderen als je een stuk met ons mee fietst. Check de fietsroute op: <1><0>parthenon-ey-ringvaartregatta.nl/fietsroute</0></1>.",
+
+    "thanks": "Alle sponsoren <0>bedankt</0> voor jullie bijdrage",
+    "further questions": "Voor vragen, stuur een email naar <1><0>wouterraateland@gmail.com</0></1>"
+  },
+  "form": {
+    "donated": "gedoneerd",
+    "sponsors": "sponsors",
+    "days": "dagen te gaan",
+    "remark": "€{{kikaAmount}} naar KiKa, €{{shirtAmount}} naar shirts",
+    "cta": "Sponsor ons"
+  },
+  "modal": {
+    "title": "<0>Bedankt</0> dat je ons wilt sponsoren!",
+    "name": "Naam / bedrijfsnaam",
+    "email": "Email adres",
+    "amount": "Bedrag",
+    "payment method": "Betaalmethode",
+    "methods": {
+      "PayPal": "PayPal",
+      "Bankoverschrijving": "Bankoverschrijving"
+    },
+    "options": {
+      "both": "Ik sponsor jullie én KiKa",
+      "kika": "Ik sponsor alleen KiKa"
+    },
+    "cta": "Verder naar betalen",
+    "success": "Gelukt!",
+    "transfer": "Maak €{{amount}} over naar",
+    "to": "op naam van",
+    "stating": "onder vermelding van",
+    "confirm": "om de sponsoring te bevestigen"
+  }
+}

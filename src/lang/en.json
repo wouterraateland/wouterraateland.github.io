@@ -1,0 +1,45 @@
+{
+  "page": {
+    "title": "Rowing <0>hard</0> for <1>KiKa</1>",
+    "intro": "On June 6th, our rowing team Keihard — consisting of Daniël, Sigur, Leon, and Wouter — is competing in the Ringvaart! In this annual race, we’ll be rowing 100 kilometers. But we’re not just doing this for us: we’re also rowing to support KiKa, a Dutch organization that funds research into treatments for cancer in children — and we need your help!",
+
+    "question1": "Where’s my money going?",
+    "answer1": "That’s your choice. If you choose to support both us and KiKa, part<1><0>*</0></1> of your donation goes to getting our shirts printed, and the rest goes straight to KiKa. If you choose to support only KiKa, your entire sponsorship goes there. Either way, your name and (company) logo will also be on our shirts. That’s 100 kilometers of exposure!",
+    "remark": "20% of your sponsorship, up to a total of €120.",
+    "question2": "What exactly is the Ringvaart?",
+    "answer2": "At 100 kilometers, the Ringvaart is the longest rowing marathon of Europe. The race is open to all kinds of rowers: from competitive rowers with years of experience to “Ringvaartleden” who started rowing this winter (us). For more information, see <1><0>parthenon-ey-ringvaartregatta.nl</0></1>.",
+    "question3": "Awesome! Is there any other way I can help?",
+    "answer3": "Yes! During the approximately 8 to 13 hours we’ll be in the boat, we’d love any and all support. If you’re free on June 6th, you can come bike along with us! Check the biking route on <1><0>parthenon-ey-ringvaartregatta.nl/fietsroute</0></1>.",
+
+    "thanks": "<0>Thanks</0> to all our supporters for their contribution",
+    "further questions": "For questions, email <1><0>wouterraateland@gmail.com</0></1>"
+  },
+  "form": {
+    "donated": "donated",
+    "sponsors": "sponsors",
+    "days": "days to go",
+    "remark": "€{{kikaAmount}} to KiKa, €{{shirtAmount}} to our shirts",
+    "cta": "Sponsor us"
+  },
+  "modal": {
+    "title": "<0>Thank you</0> for sponsoring us!",
+    "name": "Name / Company name",
+    "email": "Email address",
+    "amount": "Amount",
+    "payment method": "Payment method",
+    "methods": {
+      "PayPal": "PayPal",
+      "Bankoverschrijving": "Bank transfer"
+    },
+    "options": {
+      "both": "I sponsor you and KiKa",
+      "kika": "I only sponsor KiKa"
+    },
+    "cta": "Continue to payment",
+    "success": "You did it!",
+    "transfer": "Transfer €{{amount}} to",
+    "to": "to",
+    "stating": "stating",
+    "confirm": "to confirm the sponsorship"
+  }
+}
