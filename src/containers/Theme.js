@@ -5,20 +5,17 @@ import { opacity } from 'style-utils'
 const theme = {
   fonts: {
     main: `'Source Sans Pro', roboto, sans-serif`,
-    titles: `'Passion One', cursive`,
+    titles: `'Source Sans Pro', roboto, sans-serif`,
   },
   colors: {
-    text: 'rgba(0, 0, 0, .5)',
+    text: 'rgba(0, 0, 0, .40)',
+    emphasis: 'rgba(0, 0, 0, .8)',
     background: '#fff',
     primary: '#52006b',
     accent: '#00e9b3',
     success: '#4caf50',
     warning: '#ffc107',
     error: '#f44336',
-  },
-  opacity: {
-    titles: 0.8,
-    text: 0.55,
   },
   border: {
     width: '.125em',
@@ -46,7 +43,7 @@ injectGlobal`
     margin: 0;
 
     font-family: ${theme.fonts.main};
-    color ${opacity(theme.colors.text,theme.opacity.text)};
+    color ${theme.colors.text};
   }
 
   input, textarea, select, button {

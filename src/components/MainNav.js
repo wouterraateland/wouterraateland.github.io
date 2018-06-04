@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { theme, darken } from 'style-utils'
 
 import { Logo, GitHub, Dribbble } from 'components/icons'
 import { Link } from 'components/lib'
@@ -22,17 +23,28 @@ const Right = styled.div`
   }
 `
 
+const NavLink = Link.extend`
+  transition: color .2s ease-out;
+
+  &:hover {
+    color: ${theme('colors','emphasis')};
+    ${props => props.accent && css`
+      color: ${props => darken(theme('colors','accent')(props), 10)};
+    `}
+  }
+`
+
 export default () => (
   <MainNav>
     <Left>
-      <Link to="/"><Logo size={2} /></Link>
+      <NavLink href="/"><Logo size={2} /></NavLink>
     </Left>
     <Right>
-      <Link to="/">Projects</Link>
-      <Link to="/about">About</Link>
-      <Link accent to="/contact">Contact me</Link>
-      <Link target="_blank" to="https://github.com/wouterraateland"><GitHub size={1.5} /></Link>
-      <Link target="_blank" to="https://dribbble.com/wouterraateland"><Dribbble size={1.5} /></Link>
+      <NavLink href="/">Projects</NavLink>
+      <NavLink href="/about">About</NavLink>
+      <NavLink accent href="/contact">Contact me</NavLink>
+      <NavLink target="_blank" href="https://github.com/wouterraateland"><GitHub size={1.5} /></NavLink>
+      <NavLink target="_blank" href="https://dribbble.com/wouterraateland"><Dribbble size={1.5} /></NavLink>
     </Right>
   </MainNav>
 )
